@@ -7,6 +7,21 @@ typedef struct node {
 
 int ll_has_cycle(node *head) {
     /* your code here */
+   if(head == NULL )
+	return 0;//no cycle
+  node * p;
+  node * q;
+  p = head,q = head;
+  while(p != NULL  && q->next != NULL){
+   p = p ->next;
+   q = q->next->next;
+  if( p ==  q && p != NULL)
+    return 1;
+  if(!p || !q)
+     return 0;
+  
+} 
+return 0;
 }
 
 void test_ll_has_cycle(void) {
