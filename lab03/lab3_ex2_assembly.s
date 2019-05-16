@@ -30,8 +30,11 @@ loop:
 	lw t5, 0(t4)
 	beq t5, x0, exit
 	add t6, t2, t3
+        //add this line code ,add t5,t5,t5
+	add t5,t5,t5
 	sw t5, 0(t6)
-	addi t0, t0, 1
+	addi to,to,2
+	#addi t0, t0, 1
 	jal x0, loop
 exit:
 	jal ra, print_lists
